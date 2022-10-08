@@ -1,0 +1,114 @@
+Namespace(batch_size=64, beta=0.999, data='ml-100k', embedding_size=64, epochs=3, index=1, loss_weight_pair=0.6, loss_weight_point1=0.1, loss_weight_point2=0.1, loss_weight_reg=0.01, lr=0.0001, lr_str=0.005, numpy_seed=20, opt='adam', reduction='mean', torch_seed=20, weight_decay=0)
+Using GPU 1
+Number of Trainable Parameter Tensors: 31
+load data from data/ml-100k/u1.base.data
+load data from data/ml-100k/u1.valid.data
+load data from data/ml-100k/u1.test.data
+Training ASL model:
+chunk - [1]
+train: number of users - 943
+train: number of items - 1682
+train: number of interactions - 25923
+train: number of pairs - 196877
+Epoch: 1. Overall loss: 0.6194822098018289, pairwise loss: 0.405670214856167, item1 pointwise loss: 0.06770584500008427, item2 pointwise loss: 0.06431930445943643, item1 pointwise loss (item momentum): 0.0630895858351989, item2 pointwise loss (item momentum): 0.06140214021066967, item1 pointwise loss (user momentum): 0.06434966178104688, item2 pointwise loss (user momentum): 0.06634026229434849, regularization loss: 0.08474305999228823
+Epoch: 1. Alpha1: 0.3333333432674408, Alpha2: 0.3333333432674408, Alpha3: 0.3333333432674408
+Start tower combination searching on the validation set
+validation: number of users - 943
+validation: number of items - 1672
+validation: number of interactions - 17788
+validation: number of pairs - 111948
+Epoch: 1. Validation overall loss: 0.11014689582204601, item1 pointwise loss (mm): 0.06435988974859198, item2 pointwise loss (mm): 0.06170616226069514, item1 pointwise loss (vm): 0.05506922713794526, item2 pointwise loss (vm): 0.05395903343333729, item1 pointwise loss (mv): 0.058815530742523395, item2 pointwise loss (mv): 0.0604086158559655
+Epoch: 1. Validation Alpha_mm: 0.0036648467648774385, Alpha_vm: 0.9938368201255798, Alpha_mv: 0.00249830586835742
+test: number of users - 943
+test: number of items - 1423
+test: number of interactions - 20381
+test: number of pairs - 20381
+Metrics
+User momentum - item momentum
+ndcg score at 5 (mean): 0.3177807943475451
+hit rate at 5 (mean): 0.46197270471463986
+ndcg score at 10 (mean): 0.3916414126219305
+hit rate at 10 (mean): 0.6544832407735637
+User vanilla - item momentum
+ndcg score at 5 (mean): 0.33196537067600096
+hit rate at 5 (mean): 0.4769851116625306
+ndcg score at 10 (mean): 0.401053519429447
+hit rate at 10 (mean): 0.6600048249241794
+User momentum - item vanilla
+ndcg score at 5 (mean): 0.3094346032198963
+hit rate at 5 (mean): 0.4614350703060373
+ndcg score at 10 (mean): 0.3834230983142282
+hit rate at 10 (mean): 0.6547722438851468
+Weighted Sum
+Combine ndcg score at 5 (mean): 0.3319202959423741
+Combine hit rate at 5 (mean): 0.4769851116625306
+Combine ndcg score at 10 (mean): 0.4008451038891245
+Combine hit rate at 10 (mean): 0.6595705817480008
+Epoch: 2. Overall loss: 0.4970166299235371, pairwise loss: 0.3963810344298112, item1 pointwise loss: 0.06284384823541105, item2 pointwise loss: 0.06013861296260039, item1 pointwise loss (item momentum): 0.05006559720439703, item2 pointwise loss (item momentum): 0.049801339017486464, item1 pointwise loss (user momentum): 0.04464146694088517, item2 pointwise loss (user momentum): 0.0456071882829632, regularization loss: 0.0007080384118926636
+Epoch: 2. Alpha1: 0.003660969901829958, Alpha2: 0.9938434362411499, Alpha3: 0.0024955898988991976
+Start tower combination searching on the validation set
+validation: number of users - 943
+validation: number of items - 1672
+validation: number of interactions - 17788
+validation: number of pairs - 111948
+Epoch: 2. Validation overall loss: 0.08407085253433748, item1 pointwise loss (mm): 0.06092374315597181, item2 pointwise loss (mm): 0.058683889946251205, item1 pointwise loss (vm): 0.046234602231070135, item2 pointwise loss (vm): 0.046703250014812625, item1 pointwise loss (mv): 0.03686957837446135, item2 pointwise loss (mv): 0.03753916285782967
+Epoch: 2. Validation Alpha_mm: 0.00034173825406469405, Alpha_vm: 0.006588445045053959, Alpha_mv: 0.9930698275566101
+test: number of users - 943
+test: number of items - 1423
+test: number of interactions - 20381
+test: number of pairs - 20381
+Metrics
+User momentum - item momentum
+ndcg score at 5 (mean): 0.30889896517892546
+hit rate at 5 (mean): 0.45990488006617003
+ndcg score at 10 (mean): 0.385116593207766
+hit rate at 10 (mean): 0.6554019457245265
+User vanilla - item momentum
+ndcg score at 5 (mean): 0.3344036194855786
+hit rate at 5 (mean): 0.4899917287014055
+ndcg score at 10 (mean): 0.4044634987054963
+hit rate at 10 (mean): 0.6713640749931068
+User momentum - item vanilla
+ndcg score at 5 (mean): 0.31786706922980484
+hit rate at 5 (mean): 0.46699751861042077
+ndcg score at 10 (mean): 0.39429020684250093
+hit rate at 10 (mean): 0.6623877466619398
+Weighted Sum
+Combine ndcg score at 5 (mean): 0.3245561798433655
+Combine hit rate at 5 (mean): 0.47516542597187666
+Combine ndcg score at 10 (mean): 0.39722095852920464
+Combine hit rate at 10 (mean): 0.6626895505927762
+Epoch: 3. Overall loss: 0.4500901166577333, pairwise loss: 0.37974458035706543, item1 pointwise loss: 0.05735869974537386, item2 pointwise loss: 0.05573970056290318, item1 pointwise loss (item momentum): 0.037996945033147836, item2 pointwise loss (item momentum): 0.038136575317739355, item1 pointwise loss (user momentum): 0.03284222800502619, item2 pointwise loss (user momentum): 0.03293562410048104, regularization loss: 0.004483399544299825
+Epoch: 3. Alpha1: 0.00034136485191993415, Alpha2: 0.006578981876373291, Alpha3: 0.993079662322998
+Start tower combination searching on the validation set
+validation: number of users - 943
+validation: number of items - 1672
+validation: number of interactions - 17788
+validation: number of pairs - 111948
+Epoch: 3. Validation overall loss: 0.05509478551122105, item1 pointwise loss (mm): 0.05302643682008951, item2 pointwise loss (mm): 0.052141690604375936, item1 pointwise loss (vm): 0.03378876054892716, item2 pointwise loss (vm): 0.0340437314149872, item1 pointwise loss (mv): 0.027432976983883778, item2 pointwise loss (mv): 0.0276093504164238
+Epoch: 3. Validation Alpha_mm: 9.614757436793298e-05, Alpha_vm: 0.0016577671049162745, Alpha_mv: 0.9982460737228394
+test: number of users - 943
+test: number of items - 1423
+test: number of interactions - 20381
+test: number of pairs - 20381
+Metrics
+User momentum - item momentum
+ndcg score at 5 (mean): 0.49156502197247665
+hit rate at 5 (mean): 0.6483043837882553
+ndcg score at 10 (mean): 0.5398835461018244
+hit rate at 10 (mean): 0.7793114143920595
+User vanilla - item momentum
+ndcg score at 5 (mean): 0.4915478691326111
+hit rate at 5 (mean): 0.6483043837882553
+ndcg score at 10 (mean): 0.539809398714325
+hit rate at 10 (mean): 0.7792720272558983
+User momentum - item vanilla
+ndcg score at 5 (mean): 0.4926554710254084
+hit rate at 5 (mean): 0.6452440033085196
+ndcg score at 10 (mean): 0.5457338690967366
+hit rate at 10 (mean): 0.7905692425853714
+Weighted Sum
+Combine ndcg score at 5 (mean): 0.4926841693167392
+Combine hit rate at 5 (mean): 0.6452440033085196
+Combine ndcg score at 10 (mean): 0.545762814374825
+Combine hit rate at 10 (mean): 0.7905692425853714
